@@ -28,4 +28,5 @@ ENV PATH=/cockroach:$PATH
 ENV COCKROACH_CHANNEL=official-docker
 
 EXPOSE 26257 8080
+RUN chmod +x /cockroach/cockroach.sh
 ENTRYPOINT ["/cockroach/cockroach.sh"]
