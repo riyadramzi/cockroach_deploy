@@ -11,8 +11,8 @@ RUN microdnf update -y \
     && rm -rf /var/cache/yum
 
 RUN mkdir /usr/local/lib/cockroach /cockroach /licenses
-ADD http://ramzi.riyad.free.fr/cockroach/cockroach /tmp/build/inputs/cockroach
-COPY cockroach.sh cockroach /cockroach/
+ADD http://ramzi.riyad.free.fr/cockroach/cockroach /cockroach/cockroach
+COPY cockroach.sh /cockroach/
 COPY licenses/* /licenses/
 # Install GEOS libraries.
 COPY libgeos.so libgeos_c.so /usr/local/lib/cockroach/
